@@ -45,7 +45,7 @@ group :development, :test do
   gem "brakeman", require: false
   gem 'dotenv-rails'
   gem 'pry-rails'
-  gem "rspec-rails", "~> 6.0"
+  gem "rspec-rails", "~> 8.0"
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
