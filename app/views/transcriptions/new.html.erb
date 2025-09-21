@@ -1,0 +1,81 @@
+<h1>Voice Transcription</h1>
+
+<div data-controller="transcribe">
+	<div>
+		<button data-action="click->transcribe#start" data-transcribe-target="start">Start Listening</button>
+		<button data-action="click->transcribe#stop" data-transcribe-target="stop" disabled>Stop Listening</button>
+	</div>
+
+
+	<h3>Live transcription</h3>
+	<div id="live" data-transcribe-target="live">(not listening)</div>
+
+	<h3>Full transcription</h3>
+	<pre id="full" data-transcribe-target="full"></pre>
+
+	<h3>Summary</h3>
+	<pre id="summary" data-transcribe-target="summary"></pre>
+</div>
+
+<script type="module">
+</script>
+
+
+<style>
+  body {
+    background: #f9f9f9;
+    padding: 5px;
+    color: #333;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: #222;
+  }
+
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #444;
+  }
+
+  button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  button:hover:not(:disabled) {
+    background-color: #4338ca;
+  }
+
+  button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+
+  #live {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    min-height: 15px;
+  }
+
+  pre {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    min-height: 45px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+</style>
